@@ -10,3 +10,20 @@ function loginValidate(event) {
 }
 const loginButton = document.querySelector('#login-button');
 loginButton.addEventListener('click', loginValidate);
+
+const submitButton = document.querySelector('#submit-btn');
+const agreement = document.querySelector('#agreement');
+function buttonEnabled() {
+  if (agreement.checked) {
+    submitButton.disabled = false;
+  } else {
+    submitButton.disabled = true;
+  }
+}
+agreement.addEventListener('click', buttonEnabled);
+
+function buttonDisable() {
+  submitButton.disabled = true;
+}
+
+window.onload = buttonDisable;
