@@ -26,4 +26,12 @@ function buttonDisable() {
   submitButton.disabled = true;
 }
 
+const counter = document.querySelector('#counter');
+const textArea = document.querySelector('#textarea');
+function counterChange() {
+  const text = textArea.value.length;
+  counter.innerText = textArea.maxLength - text;
+}
+textArea.addEventListener('keyup', counterChange);
+
 window.onload = buttonDisable;
