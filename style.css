@@ -22,3 +22,8 @@ main {
   width: 675px;
   flex-direction: column;
 }
+
+.radios-container {
+  display: flex;
+  flex-direction: column;
+}
